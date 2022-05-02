@@ -1,0 +1,72 @@
+'''
+apple = 49
+man = 3
+i = 0
+j = 10
+while apple>=man:
+    apple = apple - man
+    i=i+1 #apple is 46
+    j=j-1
+print(f'남은 사과는 {apple}입니다')
+
+print(f'사과를 꺼낸 횟수는{i}')
+print(f'{j}')
+'''
+i=0
+b= [ [  1  ,3  ,4    ],
+     [  8, '$'  ,7   ],
+     [  6,  2,  5]   ]
+
+print(b[0])
+print(b[1])
+print(b[2])
+print()
+
+r=1
+c=1
+
+while i<=100000:
+            key=input('wasd 입력')
+
+        #만약 key 값이 d와 같다면
+            #b[2][2]와 b[2][1]를 서로 바꾸기
+            if key=='d':
+                b[r][c+1],b[r][c]=b[r][c],b[r][c+1]
+                r=r
+                c=c+1
+                print(b[0])
+                print(b[1])
+                print(b[2])
+                print()
+
+            if key=='a':
+                b[r][c-1],b[r][c]=b[r][c],b[r][c-1]
+                r=r
+                c=c-1
+                print(b[0])
+                print(b[1])
+                print(b[2])
+                print()
+                
+               
+            if key=='w': 
+                b[r-1][c],b[r][c]=b[r][c],b[r-1][c]
+                r=r-1
+                c=c
+                print(b[0])
+                print(b[1])
+                print(b[2])
+                print() 
+        
+          
+
+            if key=='s': 
+                b[r+1][c],b[r][c]=b[r][c],b[r+1][c]
+                r=r+1
+                c=c
+
+                print(b[0])
+                print(b[1])
+                print(b[2])
+                print() 
+
