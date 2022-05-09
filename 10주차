@@ -1,0 +1,53 @@
+#숫자 야구게임
+#1.랜덤 모듈 불러온다,
+#2. 비어있는 리스트를 만든다
+#3. 1~9사이의 임의의 숫자를 리스트에 넣는다.
+#4. 리스트안의 숫자 갯수가 3개보다 작다면 반복한다.
+# 임의의 숫자 하나를 변수 r 이 가리키게 한다.
+# 만약 r이 가리키는 숫자가 리스트안에 없다면 그 숫자를 추가 시킨다
+# 5. 숫자 3개를 입력 받아 힌트를 출력한다
+import random #1
+a=3
+alist=[] #2
+
+alist.append(random.randint(1,9)) # 3
+
+while len(alist)<3:
+  r=random.randint(1,9)
+
+  if not(r in alist):
+    alist.append(r)
+ 
+print(alist)
+
+
+
+   '''
+bd = ['a','k','_','m','l'] #_는 빈자리를 의미
+r=2 #빈자리의 번호가 현재 2번 임
+print(bd)
+while(bd !=['a','k','m','l','_'] and bd !=['_','a','k','m','l']):
+  k=input('a 또는 d를 입력하시오')
+
+  if k=='a' and r>0:
+    bd[r],bd[r-1] = bd[r-1],bd[r]
+    r-=1
+  if k== 'd'and r<4:
+    bd[r],bd[r+1] = bd[r+1],bd[r]
+    r+=1
+  print(bd)
+'''
+
+import random
+
+alist=[]
+
+alist.append(random.randint(1,5))
+
+while len(alist)<3: #alist안의 요소 갯수가 3개보다 작으면 반복
+  r=random.randint(1,5)
+
+  if not(r in alist):
+    alist.append(r)
+
+print(alist)
