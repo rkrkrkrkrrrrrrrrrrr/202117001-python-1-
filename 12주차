@@ -1,0 +1,51 @@
+c = 0
+p = 0
+
+import random
+while True:
+  x = str(input("가위, 바위 , 보, 중에 입력:"))
+  z = ["가위", "바위", "보"]
+  y = random.choice(z)
+  print("컴퓨터가 낸 것:",y,"플레이어가 낸 것:",x)
+
+  if x == "가위":
+    
+    if y == "가위":
+      print("무승부")
+    elif y == "바위":
+      print("패배")
+      c+=1
+    else:
+      print("승리")
+      p+=1
+      
+  if x == "바위":
+    
+    if y == "바위":
+      print("무승부")
+    elif y == "보":
+      print("패배")
+      c+=1
+    else:
+      print("승리")
+      p+=1
+      
+  if x == "보":
+    
+    if y == "보":
+      print("무승부")
+    elif y == "가위":
+      print("패배")
+      c+=1
+    else:
+      print("승리")
+      p+=1
+
+  print("컴퓨터",c,"플레이어",p)
+
+  if c == 4:
+      print("컴퓨터 승")
+      break
+  if p == 4:
+      print("플레이어 승")
+      break
